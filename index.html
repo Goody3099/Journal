@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matt's Daily Journal</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-<main>
-    <!-- header holds the logo and h1 -->
-    <header>
-        <div>
-            <div>logo picture goes here</div>
-            <h1>Matt's Journal Entry</h1>
-        </div>
-    </header>
-    <body>
-        <section>this will be the parent that holds the new entry section 
-            <div><h2>New Entry</h2>
-                <div>date</div>
-                <div>mood</div>
-            </div>
-            <div>text box for the entry title</div>
-            <div>text box for content of new entry</div>
-            <div>submit button</div>
-        </section>
-        <section>this will be the parent for the existing entries
-
-        </section>
-        
-    </body>
-    <footer>
-        <div>Matthew Goodman</div>
-        <div>github link</div>
-        <div>&copy;Matt's Journal Entry</div>
-    </footer>
-</main>
+<body>
+    <form action="">
+        <fieldset class= "flex">
+            <label for="journalDate">Date of entry</label>
+            <input type="date" name="journalDate" id="journalDate">
+        </fieldset>
+        <fieldset class= "flex">
+            <label for="concepts">Concepts covered</label>
+            <input type="text" name="concepts" id="concepts">
+        </fieldset>
+        <fieldset class= "flex">
+            <label for="journalEntry">Journal Entry</label>
+            <input type="text" name="journalEntry" id="journalEntry">
+        </fieldset>
+        <fieldset class= "flex">
+            <legend>Mood</legend>
+            <p>
+                <label for="">Mood List</label>
+                <select id = "myList">
+                    <option value="1">Happy</option>
+                    <option value="2">Sad</option>
+                    <option value="3">Mad</option>
+                    <option value="4">Sleepy</option>
+                </select>
+            </p>
+        </fieldset>
+        <fieldset class= "flex">
+            <label for="button">Record Journal Entry</label>
+            <input type="button" value="Submit">
+        </fieldset>
+    </form>
+</body>
 </html>
