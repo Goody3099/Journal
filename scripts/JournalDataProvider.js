@@ -7,29 +7,18 @@
  */
 
 // This is the original data.
-const journal = [
-    {
-        id: 1,
-        date: "08/10/2020",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Ok"
-    },
-    {
-        id: 2,
-        date: "08/24/2020",
-        concept: "Debugging",
-        entry: "Adam walked us though how to place the debugger in the code and use it in the dev tools",
-        mood: "Ok"
-    },
-    {
-        id: 3,
-        date: "09/4/2020",
-        concept: "Awkward picture",
-        entry: "Talking about the C42 awkward picture challenge, as well as Ember's background.",
-        mood: "Ok"
-    }
+let journal = [
+    
 ]
+
+export const getEntries = () => {
+    return fetch("http://localhost:8088/entries") // Fetch from the API
+        .then(response => response.json())  // Parse as JSON
+        .then(response => {
+            journal = response
+            // What should happen when we finally have the array?
+        })
+}
 
 /*
     You export a function that provides a version of the
