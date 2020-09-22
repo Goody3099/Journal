@@ -7,6 +7,8 @@
  */
 
 // This is the original data.
+const eventHub = document.querySelector(".container")
+
 let journal = [
     
 ]
@@ -47,4 +49,12 @@ const dispatchStateChangeEvent = () => {
     const entryStateChangedEvent = new CustomEvent("entryStateChanged")
 
     eventHub.dispatchEvent(entryStateChangedEvent)
+}
+
+export const deleteEntry = (data) =>{
+    return fetch(`http://localhost:8088/entries/${data}`, {
+        method: 'DELETE'
+    })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent)
 }
