@@ -1,25 +1,55 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "08/10/2020",
-            "concept": "HTML & CSS",
-            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-            "mood": "Ok"
-        },
-        {
-            "id": 2,
-            "date": "08/24/2020",
-            "concept": "Debugging",
-            "entry": "Adam walked us though how to place the debugger in the code and use it in the dev tools",
-            "mood": "Ok"
-        },
-        {
-            "id": 3,
-            "date": "09/4/2020",
-            "concept": "Awkward picture",
-            "entry": "Talking about the C42 awkward picture challenge, as well as Ember's background.",
-            "mood": "Ok"
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "date": "08/10/2020",
+      "concept": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "moodId": 1
+    },
+    {
+      "id": 2,
+      "date": "08/24/2020",
+      "concept": "Debugging",
+      "entry": "Adam walked us though how to place the debugger in the code and use it in the dev tools",
+      "moodId": 2
+    },
+    {
+      "id": 3,
+      "date": "09/4/2020",
+      "concept": "Awkward picture",
+      "entry": "Talking about the C42 awkward picture challenge, as well as Ember's background.",
+      "moodId": 3
+    },
+    {
+      "date": "2020-09-04",
+      "concept": "Daily Journal save()",
+      "entry": "Jerry helped me make this shit work",
+      "moodId": 4,
+      "id": 4
+    }
+  ],
+
+  "moods": [
+    {
+      "id": 1,
+      "mood": "Happy"
+    },
+    {
+      "id": 2,
+      "mood": "Sad"
+    },
+    {
+      "id": 3,
+      "mood": "Mad"
+    },
+    {
+      "id": 4,
+      "mood": "Confident"
+    },
+    {
+      "id": 5,
+      "mood": "Confused"
+    }
+  ]
 }

@@ -1,5 +1,20 @@
+import { saveEntry, getEntries } from "./JournalDataProvider.js"
+import { EntryListComponent } from "./JournalEntryList.js"
 
+const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".form-container")
+
+eventHub.addEventListener("click", event =>{
+    if(event.target.id === "Btn"){
+        const entryObj = {
+            date: document.querySelector("#journalDate").value,
+            concept: document.querySelector("#concepts").value,
+            entry: document.querySelector("#journalEntry").value,
+            mood: document.querySelector("#myList").value,
+        }
+        saveEntry(entryObj)
+    }
+})
 
 const render = () => {
    contentTarget.innerHTML += `<form action="">
@@ -20,20 +35,23 @@ const render = () => {
             <p>
                 <label for="">Mood List</label>
                 <select id = "myList">
-                    <option value="1">Happy</option>
-                    <option value="2">Sad</option>
-                    <option value="3">Mad</option>
-                    <option value="4">Sleepy</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Mad">Mad</option>
+                    <option value="Sleepy">Sleepy</option>
                 </select>
             </p>
         </fieldset>
         <fieldset class= "flex">
             <label for="button">Record Journal Entry</label>
-            <input type="button" value="Submit">
+            <input id="Btn" type="button" value="Submit">
         </fieldset>
     </form>`
 }
 
+eventHub.addEventListener("entryStateChanged", event =>{
+    getEntries().then(EntryListComponent)
+})
 export const JournalFormComponent = () => {
     render()
 }
