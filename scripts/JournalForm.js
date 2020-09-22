@@ -10,7 +10,7 @@ eventHub.addEventListener("click", event =>{
             date: document.querySelector("#journalDate").value,
             concept: document.querySelector("#concepts").value,
             entry: document.querySelector("#journalEntry").value,
-            mood: document.querySelector("#myList").value,
+            moodId: parseInt(document.querySelector("#myList").value),
         }
         saveEntry(entryObj)
     }
@@ -35,10 +35,11 @@ const render = () => {
             <p>
                 <label for="">Mood List</label>
                 <select id = "myList">
-                    <option value="Happy">Happy</option>
-                    <option value="Sad">Sad</option>
-                    <option value="Mad">Mad</option>
-                    <option value="Sleepy">Sleepy</option>
+                    <option value="1">Happy</option>
+                    <option value="2">Sad</option>
+                    <option value="3">Mad</option>
+                    <option value="4">Sleepy</option>
+                    <option value="5">Sleepy</option>
                 </select>
             </p>
         </fieldset>
